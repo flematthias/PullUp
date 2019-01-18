@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400');
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+* {
+  box-sizing: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+.radius {
+  border-radius: 5px;
+  border: solid 3px #ffffff;
+}
+.middleflex {
+  display: flex;
+  align-items: center;
+}
+body {
+  font-family: 'Dosis', sans-serif;
+}
+h1,
+h2,
+li,
+.sectionintro p,
+.overimgtext,
+.prixtype,
+.prix,
+.prixmois,
+footer {
+  text-align: center;
+}
+button {
+  margin: auto;
+}
+.sectionintro p {
+  color: #ffffff;
+}
+h1 {
+  border: solid 3px #ffffff;
+  color: #ffffff;
+  padding: 2% 12% 2% 12%;
+  font-weight: 300;
+  border-radius: 5px;
+}
+h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+h4 {
+  color: #108bd9;
+  margin-bottom: 5px;
+}
+h5 {
+  margin-bottom: 5px;
+}
+a {
+  color: #108bd9;
+  text-decoration: none;
+}
+a:hover,
+a:active,
+.pullup {
+  color: #ffffff;
+}
+header {
+  position: fixed;
+  top: 0;
+  background-color: #2b3e4f;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  width: 100%;
+  z-index: 999;
+}
+header nav a {
+  padding-left: 1em;
+}
+main {
+  position: relative;
+  background-color: white;
+  z-index: 2;
+  top: 370px;
+  padding: 50px 0;
+  transition: top 0.5s;
+}
+@media screen and (min-width: 48em) {
+  main {
+    top: 470px;
+  }
+}
+.sectionintro {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #108bd9;
+  flex-direction: column;
+  text-transform: uppercase;
+  padding-top: 110px;
+  height: 300px;
+}
+@media screen and (min-width: 48em) {
+  .sectionintro {
+    height: 400px;
+    padding-top: 140px;
+  }
+}
+.sectionintro a {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+}
+.section4caract {
+  margin: 5%;
+}
+.section4caract div {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.section4caract div p {
+  margin-top: 0;
+}
+@media screen and (min-width: 64em) {
+  .section4caract div {
+    flex-direction: row;
+  }
+  .section4caract div div {
+    flex-basis: 20%;
+  }
+}
+.ligne {
+  background-color: #f7f7f7;
+  height: 1px;
+}
+.section2illus {
+  background-color: #2b3e4f;
+  padding: 2em;
+}
+.section2illus .ligne {
+  background-color: #ababab;
+}
+.section2illus div img {
+  max-width: 40%;
+}
+.section2illus div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section2illus h2 {
+  text-align: left;
+  color: #ffffff;
+}
+.section2illus p {
+  color: #ababab;
+}
+@media screen and (min-width: 64em) {
+  .section2illus {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.sectioncontact {
+  margin: 5%;
+}
+.sectioncontact .form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.sectioncontact .form input {
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 5%;
+  width: 50%;
+  transition: width 0.4s;
+}
+.sectioncontact .form input:hover {
+  width: 60%;
+}
+.sectioncontact .form input:focus {
+  width: 90%;
+}
+.sectioncontact .form a {
+  color: #ffffff;
+  background-color: #108bd9;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 1em auto;
+  width: 33%;
+  text-align: center;
+}
+.sectioncontact .form a:hover {
+  background-color: #2b3e4f;
+  cursor: pointer;
+}
+@media screen and (min-width: 64em) {
+  .sectioncontact .form a {
+    margin: 1em 0;
+  }
+}
+@media screen and (min-width: 64em) {
+  .sectioncontact .ligne {
+    display: none;
+  }
+  .sectioncontact div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sectioncontact div div {
+    flex-basis: 47%;
+  }
+  .sectioncontact div .commentcontact {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .sectioncontact div .commentcontact p {
+    margin-top: 0;
+  }
+}
+.sectionoverimg {
+  background-image: url(../img/arbre.jpg);
+  background-position: center;
+  min-height: 300px;
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-size 0.4s ease-out;
+  background-size: 100%;
+  transition: all 0.4s ease-out;
+}
+.sectionoverimg:hover {
+  background-size: 120%;
+}
+.sectionoverimg .overimgtext {
+  display: flex;
+  justify-content: center;
+  font-size: 3.5em;
+  color: #ffffff;
+  font-weight: 300;
+}
+.sectionoverimg div {
+  font-weight: 700;
+  width: 90%;
+}
+.sectionprix {
+  padding: 50px;
+}
+@media screen and (min-width: 64em) {
+  .sectionprix {
+    margin: auto 7%;
+  }
+}
+.sectionprix div {
+  margin-bottom: 50px;
+  border: solid 1px #ababab;
+}
+.sectionprix div div {
+  margin-bottom: 0;
+}
+.sectionprix .prix {
+  font-size: 7em;
+  margin: 0;
+  padding: 0;
+}
+.sectionprix .prixtype {
+  padding-top: 10%;
+  margin: 0;
+}
+.sectionprix .prixmois {
+  padding-bottom: 10%;
+  margin: 0;
+}
+.sectionprix p {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.sectionprix .bloc1 div:first-child {
+  background-color: #108bd9;
+}
+.sectionprix .bloc2 div:first-child {
+  background-color: #2b3e4f;
+}
+.sectionprix .bloc3 div:first-child {
+  background-color: #111111;
+}
+.sectionprix li {
+  background-color: #f7f7f7;
+  border-bottom: solid 1px #ababab;
+  padding: 25px;
+}
+.sectionprix a {
+  display: block;
+  margin: 5% auto;
+  padding: 2px;
+  border: solid 1px #ababab;
+  border-radius: 5px;
+  width: 20%;
+  text-align: center;
+  color: black;
+}
+.sectionprix a:hover {
+  color: #108bd9;
+  cursor: pointer;
+}
+@media screen and (min-width: 64em) {
+  .sectionprix {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sectionprix div {
+    flex-basis: 30%;
+  }
+}
+.sectionfinale {
+  margin: 25px;
+  display: flex;
+  flex-flow: wrap column;
+  text-align: justify;
+  justify-content: space-around;
+}
+@media screen and (min-width: 64em) {
+  .sectionfinale {
+    flex-direction: row;
+    margin: auto 10%;
+  }
+  .sectionfinale div {
+    flex-basis: 45%;
+    align-content: center;
+  }
+}
+footer {
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 998;
+  top: 370px;
+}
+@media screen and (min-width: 48em) {
+  footer {
+    top: 470px;
+  }
+}
+footer nav {
+  background-color: #2b3e4f;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+@media screen and (min-width: 64em) {
+  footer nav {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+  }
+}
+footer nav a {
+  color: #ffffff;
+  margin: 5%;
+}
+@media screen and (min-width: 64em) {
+  footer nav a {
+    margin: 2.5%;
+  }
+}
+footer .pullupdown {
+  padding: 75px;
+}
+footer .pullupdown p {
+  color: #111111;
+}

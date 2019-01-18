@@ -1,0 +1,430 @@
+//texte
+.pullup {}
+
+body {
+    font-family: @font1;
+}
+
+h1,
+h2,
+li,
+.sectionintro p,
+.overimgtext,
+.prixtype,
+.prix,
+.prixmois,
+footer {
+    text-align: center;
+}
+
+button {
+    margin: auto;
+}
+
+.sectionintro p {
+    color: @colorinverse;
+}
+
+h1 {
+    border: @border;
+    color: @colorinverse;
+    padding: 2% 12% 2% 12%;
+    font-weight: 300;
+    border-radius: @radius;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h4 {
+    color: @color1;
+    margin-bottom: @padding;
+}
+
+h5 {
+    margin-bottom: @padding;
+
+}
+
+a {
+    color: @color1;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+.pullup,
+    {
+    color: @colorinverse;
+}
+
+
+
+//SECTION
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: @color2;
+    .middleflex;
+    justify-content: space-around;
+    height: 70px;
+    width: 100%;
+    z-index: 999;
+}
+
+header nav a {
+    padding-left: 1em;
+}
+
+main {
+    position: relative;
+    background-color: white;
+    z-index: 2;
+    top: 370px;
+    padding: @gap 0;
+    transition: top 0.5s;
+
+    @media @tablet {
+        top: 470px;
+    }
+}
+
+.sectionintro {
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    .middleflex;
+    background-color: @color1;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding-top: 110px;
+    height: 300px;
+
+    @media @tablet {
+        height: 400px;
+        padding-top: 140px;
+    }
+}
+
+.sectionintro a {
+    background-color: @colorinverse;
+    border-radius: @radius;
+    padding: @padding;
+}
+
+.section4caract {
+    margin: @margin;
+}
+
+.section4caract div {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .margintoptext();
+
+    @media @laptop {
+        flex-direction: row;
+
+        div {
+            flex-basis: 20%;
+        }
+    }
+}
+
+.ligne {
+    background-color: @color4;
+    height: 1px;
+}
+
+.section2illus {
+    background-color: @color2;
+    padding: 2em;
+
+    .ligne {
+        background-color: @color5;
+    }
+
+
+    div img {
+        max-width: 40%
+    }
+}
+
+.section2illus div:first-child {
+    .middleflex;
+    justify-content: center;
+
+}
+
+.section2illus {
+
+    h2 {
+        text-align: left;
+        color: @colorinverse;
+    }
+
+    p {
+        color: @color5;
+    }
+}
+
+@media @laptop {
+    .section2illus {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.sectioncontact {
+    margin: @margin;
+}
+
+.sectioncontact .form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+
+
+    input {
+        height: @gap;
+        border-radius: @radius;
+        padding-left: @margin;
+        width: 50%;
+        transition: width 0.4s;
+
+        &:hover {
+            width: 60%;
+        }
+
+        &:focus {
+            width: 90%;
+        }
+
+
+    }
+
+    a {
+        color: @colorinverse;
+        background-color: @color1;
+        border-radius: @radius;
+        padding: @padding;
+        margin: 1em auto;
+        width: 33%;
+        text-align: center;
+
+        &:hover {
+            background-color: @color2;
+            cursor: pointer
+        }
+
+        @media @laptop {
+            margin: 1em 0;
+        }
+    }
+}
+
+
+@media @laptop {
+    .sectioncontact {
+        .ligne {
+            display: none;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                flex-basis: 47%;
+            }
+
+            .commentcontact {
+                flex-direction: column;
+                justify-content: flex-start;
+
+                .margintoptext();
+            }
+        }
+    }
+}
+
+.sectionoverimg {
+    background-image: url(../img/arbre.jpg);
+    background-position: center;
+    min-height: 300px;
+    margin: @gap 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-size 0.4s ease-out;
+    .effetphoto();
+
+
+    .overimgtext {
+        display: flex;
+        justify-content: center;
+        font-size: 3.5em;
+        color: @colorinverse;
+        font-weight: 300;
+    }
+
+    div {
+        font-weight: 700;
+        width: 90%;
+    }
+}
+
+.sectionprix {
+    padding: @gap;
+
+    @media @laptop {
+        margin: auto 7%;
+    }
+
+    div {
+        margin-bottom: @gap;
+        border: @bordertab;
+    }
+
+    div div {
+        margin-bottom: 0;
+    }
+
+    .prix {
+        font-size: 7em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .prixtype {
+        padding-top: @margin*2;
+        margin: 0;
+    }
+
+    .prixmois {
+        padding-bottom: @margin*2;
+        margin: 0;
+    }
+
+    p {
+        color: @colorinverse;
+        text-transform: uppercase;
+    }
+
+    .bloc1 div:first-child {
+        background-color: @color1;
+    }
+
+    .bloc2 div:first-child {
+        background-color: @color2;
+    }
+
+    .bloc3 div:first-child {
+        background-color: @color3;
+    }
+
+    li {
+        background-color: @color4;
+        border-bottom: @bordertab;
+        padding: @gap/2;
+    }
+
+    a {
+        display: block;
+        margin: @margin auto;
+        padding: 2px;
+        border: @bordertab;
+        border-radius: @radius;
+        width: 20%;
+        text-align: center;
+        color: black;
+
+        &:hover {
+            color: @color1;
+            cursor: pointer;
+        }
+
+    }
+
+    @media @laptop {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            flex-basis: 30%;
+        }
+    }
+}
+
+.sectionfinale {
+    margin: @gap/2;
+    display: flex;
+    flex-flow: wrap column;
+    text-align: justify;
+    justify-content: space-around;
+
+    @media @laptop {
+        flex-direction: row;
+        margin: auto 10%;
+
+        div {
+            flex-basis: 45%;
+            align-content: center;
+
+        }
+
+    }
+
+}
+
+footer {
+    background-color: @color4;
+    position: relative;
+    z-index: 998;
+    top: 370px;
+
+
+    @media @tablet {
+        top: 470px;
+    }
+
+
+
+    nav {
+        background-color: @color2;
+        display: flex;
+        flex-direction: column;
+        padding: @margin;
+
+        @media@laptop {
+            display: inline-block;
+            width: 100%;
+            padding: @padding;
+
+        }
+
+        a {
+            color: @colorinverse;
+            margin: @margin;
+
+            @media @laptop {
+                margin: @margin/2;
+            }
+        }
+    }
+
+    .pullupdown {
+        p {
+            color: @color3;
+        }
+
+        padding: 75px;
+    }
+
+
+}
